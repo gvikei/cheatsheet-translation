@@ -67,49 +67,49 @@
 
 **10. Breadth-first search (BFS) ― Breadth-first search is a graph search algorithm that does a level-by-level traversal. We can implement it iteratively with the help of a queue that stores at each step future nodes to be visited. For this algorithm, we can assume action costs to be equal to a constant c⩾0.**
 
-&#10230; Tìm kiếm theo chiều rộng (BFS) - Tìm kiếm theo chiều động là một thuật toán tìm kiếm theo lớp trên đồ thị. Chúng ta có thể cài đặt thuật toán này bằng cách dùng hàng đợi để lưu các nút sẽ được thăm trong tương lai. Đối với thuật toán này, chi phí hành động được giả định bằng 0.
+&#10230; Tìm kiếm theo chiều rộng (BFS) - Tìm kiếm theo chiều động là một thuật toán tìm kiếm theo lớp trên đồ thị. Chúng ta có thể cài đặt phiên bản khử đệ quy của thuật toán này bằng cách dùng hàng đợi (queue) để lưu các nút sẽ được thăm trong tương lai. Đối với thuật toán này, chi phí hành động được giả định bằng 0.
 
 <br>
 
 
 **11. Depth-first search (DFS) ― Depth-first search is a search algorithm that traverses a graph by following each path as deep as it can. We can implement it recursively, or iteratively with the help of a stack that stores at each step future nodes to be visited. For this algorithm, action costs are assumed to be equal to 0.**
 
-&#10230;
+&#10230; Tìm kiếm theo chiều sâu (DFS) - Tìm kiếm theo chiều sâu là thuật toán tìm kiếm duyệt qua một đồ thị bằng cách theo mỗi đường đi càng sâu càng tốt. Chúng ta có thể cài đặt bằng phương pháp đệ quy hoặc khử đệ quy bằng cách dùng ngăn xếp (stack) để lưu các nút sẽ được thăm trong tương lai. Đối với thuật toán này, chi phí hành động được giả định bằng 0.
 
 <br>
 
 
 **12. Iterative deepening ― The iterative deepening trick is a modification of the depth-first search algorithm so that it stops after reaching a certain depth, which guarantees optimality when all action costs are equal. Here, we assume that action costs are equal to a constant c⩾0.**
 
-&#10230;
+&#10230; Đi sâu dần - Thủ thuật đi sâu dần là một biến thể của thuật toán tìm kiếm theo chiều sâu để nó dừng lại sau khi đạt đến độ sâu nhất định, đảm bảo tính tối ưu khi tất cả chi phí của các hành động đều bằng nhau. Ở đây, chúng tôi giả định rằng chi phí hành động bằng một hằng số c⩾0.
 
 <br>
 
 
 **13. Tree search algorithms summary ― By noting b the number of actions per state, d the solution depth, and D the maximum depth, we have:**
 
-&#10230;
+&#10230; Tổng kết các thuật toán tìm kiếm trên cây - Bằng cách đặt b là số lượng hành động cho mỗi trạng thái, d là độ sâu của lời giải và D là độ sâu tối đa, ta có: 
 
-<br>
+<br> 
 
 
 **14. [Algorithm, Action costs, Space, Time]**
 
-&#10230;
+&#10230; Thuật toán, Chi phí, Trạng thái, Thời gian chạy
 
 <br>
 
 
 **15. [Backtracking search, any, Breadth-first search, Depth-first search, DFS-Iterative deepening]**
 
-&#10230;
+&#10230; Tìm kiếm quay lui, bất kỳ, Tìm kiếm theo chiều rộng, tìm kiếm theo chiều sâu, Tìm kiếm sâu dần
 
 <br>
 
 
 **16. Graph search**
 
-&#10230;
+&#10230; Tìm kiếm trên đồ thị
 
 <br>
 
