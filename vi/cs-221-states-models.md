@@ -116,105 +116,105 @@
 
 **17. This category of states-based algorithms aims at constructing optimal paths, enabling exponential savings. In this section, we will focus on dynamic programming and uniform cost search.**
 
-&#10230;
+&#10230; Nhóm thuật toán này hướng đến việc tìm kiếm các dường dẫn tối ưu để tiết kiệm chi phí theo hàm số mũ. Trong phần này, chúng ta sẽ tập trung vào quy hoạnh động và tìm kiếm với chi phí đều.
 
 <br>
 
 
 **18. Graph ― A graph is comprised of a set of vertices V (also called nodes) as well as a set of edges E (also called links).**
 
-&#10230;
+&#10230; Đồ thị - Một đồ thị bao gồm một tập các đỉnh V (còn được gọi là các nút) và một tập cạnh E (còn được gọi là liên kết) 
 
 <br>
 
 
 **19. Remark: a graph is said to be acylic when there is no cycle.**
 
-&#10230;
+&#10230; Ghi chú: một đồ thị được cho là không chu trình khi nó không chứa một đường đi đóng.
 
 <br>
 
 
 **20. State ― A state is a summary of all past actions sufficient to choose future actions optimally.**
 
-&#10230;
+&#10230; Trạng thái - Một trạng thái là tổng hợp của tất cả các hành động trong quá khứ đủ để xác định các hành động tối ưu trong tương lai.
 
 <br>
 
 
 **21. Dynamic programming ― Dynamic programming (DP) is a backtracking search algorithm with memoization (i.e. partial results are saved) whose goal is to find a minimum cost path from state s to an end state send. It can potentially have exponential savings compared to traditional graph search algorithms, and has the property to only work for acyclic graphs. For any given state s, the future cost is computed as follows:**
 
-&#10230;
+&#10230; Quy hoạch động - Quy hoạch động (dynamic programming - DP) thực hiện tìm kiếm đệ quy quay lui kết hợp với việc lưu trữ (lưu lại một phần lời giải) để tìm được đường đi với chi phí thấp nhất từ trạng thái đầu đến trạng thái kết thúc. Nó có khả năng tiết kiệm theo hàm mũ khi so sánh với các thuật toán tìm kiếm trên đồ thị truyền thống, và có đặc tính chỉ hoạt động với đồ thị không chu trình. Với một trạng thái s bất kỳ, chi phí tương lai được tính như sau:  
 
 <br>
 
 
-**22. [if, otherwise]**
+**22. [if, otherwise]** 
 
-&#10230;
+&#10230; [nếu, thì]
 
 <br>
 
 
 **23. Remark: the figure above illustrates a bottom-to-top approach whereas the formula provides the intuition of a top-to-bottom problem resolution.**
 
-&#10230;
+&#10230; Lưu ý: hình ở trên minh hoạ cách tiếp cận từ dưới lên trong khi công thức đưa ra hướng tiếp cận từ trên xuống. 
 
 <br>
 
 
 **24. Types of states ― The table below presents the terminology when it comes to states in the context of uniform cost search:**
 
-&#10230;
+&#10230;  Các loại trạng thái - Bảng phía dưới trình bày thuật ngữ dùng trong bài toán tìm kiếm với chi phí đều
 
 <br>
 
 
 **25. [State, Explanation]**
 
-&#10230;
+&#10230; [Trạng thái, Giải thích]
 
 <br>
 
 
 **26. [Explored, Frontier, Unexplored]**
 
-&#10230;
+&#10230; [Đã qua, Biên giới, Chưa qua]
 
 <br>
 
 
 **27. [States for which the optimal path has already been found, States seen for which we are still figuring out how to get there with the cheapest cost, States not seen yet]**
 
-&#10230;
+&#10230; [Các trạng đã tìm được đường đi tối ưu, Các trạng thái đã được thăm nhưng vẫn đang tìm kiếm đường đi với chi phí ít nhất, Các trạng thái chưa được đi qua]
 
-<br>
+<br> 
 
 
 **28. Uniform cost search ― Uniform cost search (UCS) is a search algorithm that aims at finding the shortest path from a state sstart to an end state send. It explores states s in increasing order of PastCost(s) and relies on the fact that all action costs are non-negative.**
 
-&#10230;
+&#10230; Tìm kiếm với chi phí đều - Tìm kiếm với chi phí đều (UCS) là tìm thuật toán tìm đường đi ngắn nhất từ trạng thái sstart đến trạng thái ssend. Nó khám phá các trạng thái s theo thứ tự tăng dần chi phí trong quá khứ PastCost(s) và dựa vào cơ sở tất cả các chi phí hành động đều không âm.
 
 <br>
 
 
 **29. Remark 1: the UCS algorithm is logically equivalent to Dijkstra's algorithm.**
 
-&#10230;
+&#10230; Ghi chú 1: Thuật toán tìm kiếm với chi phí đều có logic hoạt động như thuật toán Dijkstra.
 
 <br>
 
 
 **30. Remark 2: the algorithm would not work for a problem with negative action costs, and adding a positive constant to make them non-negative would not solve the problem since this would end up being a different problem.**
 
-&#10230;
+&#10230; Ghi chú 2: thuật toán sẽ không hoạt động đối với một bài toán có chi phí âm, và việc thêm một hằng sớ dương để làm cho chúng không âm sẽ không giúp giải quyết bài toán vì đây là một bài toán khác.
 
 <br>
 
 
 **31. Correctness theorem ― When a state s is popped from the frontier F and moved to explored set E, its priority is equal to PastCost(s) which is the minimum cost path from sstart to s.**
 
-&#10230;
+&#10230; Tính đúng đắn - Khi một trạng thái s được đưa ra khỏi biên giới F và thêm vào tập các cạnh đã thăm E, độ ưu tiên của nó sẽ bằng với chi phí trong quá khứ PastCost(s), là chi phí ít nhất để đi từ sstart đến s.
 
 <br>
 
