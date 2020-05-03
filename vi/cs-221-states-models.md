@@ -32,9 +32,9 @@
 
 **5. This category of states-based algorithms explores all possible states and actions. It is quite memory efficient, and is suitable for huge state spaces but the runtime can become exponential in the worst cases.**
 
-&#10230;
+&#10230; Loại thuật toán dựa trên trạng thái này tìm kiếm tất cả các trạng thái và hành động khả dĩ. Nó khá hiệu quả về bộ nhớ và phù hợp với các không gian trạng thái lớn nhưng thời gian chạy có thể tăng theo cấp số nhân trong những trường hợp xấu nhất.
 
-<br> Loại thuật toán dựa trên trạng thái này tìm kiếm tất cả các trạng thái và hành động khả dĩ. Nó khá hiệu quả về bộ nhớ và phù hợp với các không gian trạng thái lớn nhưng thời gian chạy có thể tăng theo cấp số nhân trong những trường hợp xấu nhất.
+<br>
 
 
 **6. [Self-loop, More than a parent, Cycle, More than a root, Valid tree]**
@@ -221,21 +221,21 @@
 
 **32. Graph search algorithms summary ― By noting N the number of total states, n of which are explored before the end state send, we have:**
 
-&#10230;
+&#10230; Tổng kết các thuật toán tìm kiếm trên đồ thị - Ký hiệu N là số lượng các trạng thái, trong đó có n trạng thái đã được thăm trước khi đến trạng thái send, ta có:
 
 <br>
 
 
 **33. [Algorithm, Acyclicity, Costs, Time/space]**
 
-&#10230;
+&#10230; [Thuật toán, Tính không chu trình, Chi phí, Thời gian/Không gian]
 
 <br>
 
 
 **34. [Dynamic programming, Uniform cost search]**
 
-&#10230;
+&#10230; [Quy hoạch động, Tìm kiếm chi phí đều]
 
 <br>
 
@@ -244,110 +244,110 @@
 
 &#10230;
 
-<br>
+<br> Ghi chú: Việc tính ngược độ phức tạp thuật toán giả định rằng số lượng hành động trong mỗi trạng thái là hằng số.
 
 
 **36. Learning costs**
 
-&#10230;
+&#10230; Chi phí học tập
 
 <br>
 
 
 **37. Suppose we are not given the values of Cost(s,a), we want to estimate these quantities from a training set of minimizing-cost-path sequence of actions (a1,a2,...,ak).**
 
-&#10230;
+&#10230; Giả sử chúng ta không biết các chi phí trong Cost(s,a), ta muốn ước tính các đại lượng từ tập huấn luyện nhằm giảm thiểu chi phí cho một chuỗi các hành động (a1,a2,...,ak).
 
 <br>
 
 
 **38. [Structured perceptron ― The structured perceptron is an algorithm aiming at iteratively learning the cost of each state-action pair. At each step, it:, decreases the estimated cost of each state-action of the true minimizing path y given by the training data, increases the estimated cost of each state-action of the current predicted path y' inferred from the learned weights.]**
 
-&#10230;
+&#10230; Perceptron có cấu trúc - Perception có cấu trúc là một thuật toán nhằm mục đích học tuần tự chi phí của từng cặp trạng thái - hành động. Tại mỗi bước, thuật toán này: giảm chi phí ước tính cho mỗi trạng thái-hành động với từng đường đi ngắn nhất y được cho bởi dữ liệu huấn luyện, tăng chi phí ước tính cho mỗi trạng thái-hành động với từng đường dự đoán y' được suy ra từ các trọng số đã học.
 
 <br>
 
 
 **39. Remark: there are several versions of the algorithm, one of which simplifies the problem to only learning the cost of each action a, and the other parametrizes Cost(s,a) to a feature vector of learnable weights.**
 
-&#10230;
+&#10230; Ghi chú: có nhiều phiên bản khác nhau cho thuật toán, một trong số đó đơn giản hoá vấn đề bằng cách chỉ học chi phí của mỗi hành động a, còn số khác thì tham số hoá chi phí Cost(s,a) bằng một vector có trọng số có thể được học.
 
 <br>
 
 
 **40. A* search**
 
-&#10230;
+&#10230; Tìm kiếm A*
 
 <br>
 
 
 **41. Heuristic function ― A heuristic is a function h over states s, where each h(s) aims at estimating FutureCost(s), the cost of the path from s to send.**
 
-&#10230;
+&#10230; Hàm heuristic - Heuristic là hàm h được áp dụng lên các trạng thái s, với mỗi h(s) hướng đến việc ước tính chi phí tương lai FutureCost(s), chi phí đường đi từ s đến send. 
 
 <br>
 
 
 **42. Algorithm ― A∗ is a search algorithm that aims at finding the shortest path from a state s to an end state send. It explores states s in increasing order of PastCost(s)+h(s). It is equivalent to a uniform cost search with edge costs Cost′(s,a) given by:**
 
-&#10230;
+&#10230; Thuật toán - A* là thuật toán tìm kiếm hướng đến việc tìm đường đi ngắn nhất từ trạng thái s đến trạng thái send. Nó khám phá các trạng thái s theo chiều tăng dần của chi phí trong quá khứ PastCost(s) + h(s). Thuật toán này tương đương với thuật toán tìm kiếm theo chi phí đều với chi phí cho mỗi cạnh Cost'(s,a) được cho bởi:
 
 <br>
 
 
 **43. Remark: this algorithm can be seen as a biased version of UCS exploring states estimated to be closer to the end state.**
 
-&#10230;
+&#10230; Ghi chú: thuật toán này có thể được xem là một phiên bản của tìm kiếm với chi phí đều thiên vị với các trạng thái gần trạng thái kết thúc.
 
 <br>
 
 
 **44. [Consistency ― A heuristic h is said to be consistent if it satisfies the two following properties:, For all states s and actions a, The end state verifies the following:]**
 
-&#10230;
+&#10230; Tính nhất quán - Một heuristic h được cho là nhất quán nếu nó thoả mãn được 2 tính chất sau:, Với mọi trạng thái s và hành động a, Trạng thái cuối xác minh điều sau:
 
 <br>
 
 
 **45. Correctness ― If h is consistent, then A∗ returns the minimum cost path.**
 
-&#10230;
+&#10230; Tính đúng đắn - Nếu h có tính nhất quán, thì A* trả về đường đi với chi phí ít nhất.
 
 <br>
 
 
 **46. Admissibility ― A heuristic h is said to be admissible if we have:**
 
-&#10230;
+&#10230; Tính chấp nhận - Một heuristic h được chấp nhận nếu chúng ta có:
 
 <br>
 
 
 **47. Theorem ― Let h(s) be a given heuristic. We have:**
 
-&#10230;
+&#10230; Định lý - Đặt h(s) là heuristic đã cho. Chúng ta có:
 
 <br>
 
 
 **48. [consistent, admissible]**
 
-&#10230;
+&#10230; [tính nhất quán, tính chấp nhận được]
 
 <br>
 
 
 **49. Efficiency ― A* explores all states s satisfying the following equation:**
 
-&#10230;
+&#10230; Tính hiệu quả - A* khám phá các trạng thái s thoả mãn phương trình sau:
 
 <br>
 
 
 **50. Remark: larger values of h(s) is better as this equation shows it will restrict the set of states s going to be explored.**
 
-&#10230;
+&#10230; Ghi chú: các giá trị của h(s) càng lớn càng tốt vì phương trình này chỉ ra rằng nó sẽ giới hạn các trạng thái cần khám phá. 
 
 <br>
 
